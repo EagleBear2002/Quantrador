@@ -15,7 +15,6 @@ def sanitize_filename(name):
     return cleaned.replace(' ', '_').replace('\u3000', '_')
 
 
-# ----------------- 修改后的StockMapper类 -----------------
 class StockMapper:
     def __init__(self):
         self.code_name_map = {}
@@ -36,14 +35,12 @@ class StockMapper:
         return self.code_name_map.get(code, f"未知股票_{code}")
 
 
-# ----------------- 修改后的保存逻辑 -----------------
 def generate_filename(code, stock_mapper):
     """生成标准文件名"""
     name = stock_mapper.get_clean_name(code)
     return f"{code}-{name}.csv"
 
 
-# ----------------- 修改后的下载函数 -----------------
 def download_and_save(config):
     os.makedirs(config['save_path'], exist_ok=True)
     stock_mapper = StockMapper()
@@ -75,7 +72,6 @@ def download_and_save(config):
             log_error(code, error_msg)
 
 
-# ----------------- 修改后的清洗函数 -----------------
 def clean_dataframe(df, code, stock_mapper):
     """增强型数据清洗"""
     # 统一列名格式
