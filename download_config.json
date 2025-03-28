@@ -10,7 +10,7 @@
     "600882"
   ],
   "start_date": "20150101",
-  "end_date": "20250326",
+  "end_date": "20250327",
   "save_path": "./stock_data",
   "adjust_type": "qfq",
   "period": "daily"

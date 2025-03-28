@@ -91,7 +91,7 @@ def clean_dataframe(df, code, stock_mapper):
     return df
 
 
-def load_config(config_path='config.json'):
+def load_config(config_path='download_config.json'):
     """加载配置并设置默认值"""
     default_config = {
         "stock_codes": [],
